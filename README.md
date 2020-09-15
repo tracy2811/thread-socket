@@ -2,6 +2,8 @@
 
 Transfer file from client to server using thread approach
 
+![demo](./demo.gif)
+
 ## Usage
 
 Run server
