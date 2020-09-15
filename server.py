@@ -32,7 +32,8 @@ class ClientListener(Thread):
         names = glob.glob(name + '*' + extension)
         if len(names) >= 1:
             numbers = [int(s) for name in names for s in re.findall(r'\d+', os.path.splitext(name)[0])]
-            number = max(numbers) if len(numbers) else 1
+            number = max(numbers) if len(numbers) else 0 
+            number += 1
             fullname = name + '_copy' + str(number) + extension
 
         with open(fullname, 'wb') as fs:
